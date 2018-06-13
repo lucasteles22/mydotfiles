@@ -1,0 +1,45 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+export PATH=~/.local/bin:/usr/local/pgsql/bin:$PATH
+
+# Path to your oh-my-zsh installation.
+export ZSH=/home/lucas/.oh-my-zsh
+export TERM="xterm-256color"
+
+# export PATH=$PATH:~/.rcp-scripts/bin
+export PATH=/usr/local/bin:$PATH
+
+export EDITOR='nvim'
+export VISUAL='nvim'
+
+alias n="nvim"
+
+alias rc2="cd ~/Rock/rc2; rm tmp/pids/server.pid >/dev/null 2>&1; docker-compose up"
+alias rc2restore="sh ~/restore.sh"
+
+# Docker alias
+alias dspec="docker-compose run --rm app bundle exec rspec"
+alias dbundle="docker-compose run --rm app bundle install"
+alias drails="docker-compose run --rm app rails"
+alias dconsole="docker-compose run --rm app rails c"
+alias dmigrate="docker-compose run --rm app rails db:migrate"
+alias dpry="docker attach"
+alias dbash="docker-compose run --rm app bash"
+alias dyarn="docker-compose run --rm app yarn"
+alias dbrunch="docker-compose run --rm app yarn brunch w"
+
+
+ZSH_THEME="spaceship"
+
+plugins=(git zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
+
+SPACESHIP_RUBY_SHOW=false
+SPACESHIP_NODE_SHOW=false
+SPACESHIP_HOST_SHOW=false
+SPACESHIP_KUBECONTEXT_SHOW=false
+SPACESHIP_USER_SHOW=false
+SPACESHIP_PACKAGE_SHOW=false
+SPACESHIP_DOCKER_SHOW=false

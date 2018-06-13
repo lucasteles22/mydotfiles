@@ -1,0 +1,9 @@
+let mapleader = " "
+set foldmethod=syntax
+set foldlevel=99
+
+colorscheme gruvbox
+set background=dark " Setting dark mode
+let g:gruvbox_contrast_dark='hard'
+hi Normal ctermbg=none
+hi NonText ctermbg=none
